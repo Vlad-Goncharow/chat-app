@@ -1,0 +1,181 @@
+.formWrapper {
+  padding: 0px 15px 15px 15px;
+  margin-top: 15px;
+}
+
+.form {
+  background: #40444B;
+  border-radius: 8px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  &_top {
+    padding: 15px;
+    display: flex;
+    border-bottom: 1px solid #37393f;
+  }
+
+  &_bottom {
+    width: 100%;
+    display: flex;
+    min-height: 48px;
+    position: relative;
+  }
+
+  &_plus {
+    padding: 10px;
+    border-right: 1px solid #37393F;
+    background: #40444B;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+      width: 20px;
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  &_input {
+    background: #40444B;
+    flex: 1;
+
+    min-height: 100%;
+    padding: 0 15px;
+    color: #fff;
+    width: 100%;
+  }
+
+  &_icon {
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.img {
+  margin-right: 15px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &_wrapper {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &_name {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &_menu {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #37393f;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    padding: 2px 7px;
+  }
+
+  &_menuItem {
+    cursor: pointer;
+
+    svg {
+      width: 15px;
+    }
+
+    &_delete {
+      svg {
+        fill: red;
+      }
+    }
+  }
+}
+
+.uploadMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #000000a6;
+  align-items: center;
+  z-index: 2;
+  justify-content: center;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: rgb(0 0 0 / 60%);
+
+
+
+  &_wrapper {
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

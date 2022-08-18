@@ -1,0 +1,19 @@
+.modal {
+  position: fixed;
+  top: 25px;
+  right: 0;
+  transform: translateX(110%);
+  transition: transform 0.3s;
+  color: #c5c5c5;
+  background: #202225;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  z-index: 100;
+  
+  &_active{
+    transition: transform 0.3s;
+    transform: translateX(-25px);
+  }
+}

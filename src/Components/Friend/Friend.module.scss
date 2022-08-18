@@ -1,0 +1,114 @@
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin: 15px -10px 0 -10px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 2px;
+    background: #40444b;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media(min-width:780px) {
+    &:hover {
+      background: #40444b;
+    }
+  }
+
+  &_image {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &_name {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &_left {
+    display: flex;
+    align-items: center;
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+  }
+
+  &_icon {
+    margin-left: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #2f3136;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media(min-width:780px) {
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        background: #242628;
+
+        svg {
+          fill: #b9bbbe;
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  background: #2f3136;
+  border-radius: 7px;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 5;
+
+  &_btn {
+    padding: 13px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background: #202225;
+    }
+  }
+}

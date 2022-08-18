@@ -1,0 +1,142 @@
+.page {
+  background: #36393f;
+  flex: 1;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  @media(max-width:780px) {
+    padding: 20px 10px;
+    max-width: 100%;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 25px;
+}
+
+.block {
+  border-radius: 20px;
+  background: #202225;
+  max-width: 750px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  @media(max-width:780px) {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+
+  &_top {
+    height: 100px;
+    background: #3ca45c;
+  }
+
+  &_bottom {
+    padding: 20px;
+
+    @media(max-width:780px) {
+      padding: 12px;
+    }
+  }
+
+  &_center {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+
+    @media(max-width:780px) {
+      flex-direction: column;
+    }
+
+    span {
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+
+  &_avatar {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 15px;
+    border: 7px solid #202225;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &_info {
+    border-radius: 20px;
+    padding: 20px;
+    background: #2f3136;
+
+    @media(max-width:780px) {
+      padding: 12px;
+    }
+  }
+}
+
+.info {
+  &_item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media(max-width:780px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &_left {
+    @media(max-width:780px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &_title {
+    color: #b9b7ba;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  &_descr {
+    color: #fff;
+    font-size: 15px;
+  }
+
+  &_right {
+    background: #686d73;
+    color: #fff;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+}

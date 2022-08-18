@@ -1,0 +1,15 @@
+//======================================
+.ServerPage {
+  display: flex;
+  flex: 1;
+
+  max-height: 100vh;
+}
+
+.messages {
+  position: relative;
+  background: #37393F;
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+}

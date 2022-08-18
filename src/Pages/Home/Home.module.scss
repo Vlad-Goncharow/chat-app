@@ -1,0 +1,20 @@
+.home {
+  background: #37393F;
+  display: flex;
+  flex: 1;
+}
+
+.panel {
+  background: #2f3136;
+  min-width: 250px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

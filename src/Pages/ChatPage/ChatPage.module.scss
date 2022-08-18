@@ -1,0 +1,153 @@
+.messages {
+  flex: 50%;
+  background: #37393F;
+
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  position: relative;
+}
+
+.header {
+  min-height: 48px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #202225;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  margin-right: 25px;
+  cursor: pointer;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px 15px 15px;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.row {
+  overflow-y: scroll;
+  flex: 1;
+  padding: 0 15px;
+  margin-right: 10px;
+}
+
+.message {
+  margin-bottom: 20px;
+  display: flex;
+
+  &_img {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.block {
+  width: 100%;
+
+  &_name {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  &_text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &_img {
+    width: 500px;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      height: 0;
+      padding: 20% 0;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "TypeMates";
+  font-display: swap;
+  src: url("./fonts/TypeMatesCeraRoundProBold.woff") format("woff"), url("./fonts/TypeMatesCeraRoundProBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TypeMates";
+  font-display: swap;
+  src: url("./fonts/TypeMatesCeraRoundProRegular.woff") format("woff"), url("./fonts/TypeMatesCeraRoundProRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-display: swap;
+  src: url("./fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("./fonts/HelveticaNeueCyr-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-display: swap;
+  src: url("./fonts/HelveticaNeueCyr-Black.woff") format("woff"), url("./fonts/HelveticaNeueCyr-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-display: swap;
+  src: url("./fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("./fonts/HelveticaNeueCyr-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+@import './Reset.scss';
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2E3036;
+  border-radius:10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202225;
+  border-radius:10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  font-family: TypeMates, sans-serif !important;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+
+  
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  @media(max-width:1200px) {
+    max-width: 90%;
+  }
+}
+
+
+.panel{
+  background: #2f3136;
+  min-width: 250px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}

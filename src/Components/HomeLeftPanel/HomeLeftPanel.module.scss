@@ -1,0 +1,149 @@
+.panel {
+  background: #2f3136;
+  flex: 25% 0;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media(max-width:780px) {
+    flex: 1 1;
+  }
+}
+
+.top {
+  padding: 10px;
+}
+
+.item {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  span {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: #37393f;
+
+    svg {
+      fill: #b9bbbe;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 -5px;
+  position: relative;
+
+  &_img {
+    margin-right: 10px;
+
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+
+  &_name {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  &_delete {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+
+    @media(max-width:780px) {
+      opacity: 1;
+      background: #37393F;
+      width: 25px;
+      height: 25px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 12px;
+      height: 2px;
+      background: #fff;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      width: 12px;
+      height: 2px;
+      background: #fff;
+    }
+
+    &:hover {
+      opacity: 1;
+      background: #202225;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    background: #37393f;
+  }
+
+  &:hover & {
+    &_delete {
+      opacity: 1;
+    }
+  }
+}
+
+.messages {
+  padding: 5px;
+
+  &_item {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #fff;
+
+    svg {
+      fill: #fff;
+      margin-right: 10px;
+    }
+  }
+}
