@@ -56,9 +56,9 @@ export default function AddFriend() {
         if (!check) {
           //Если человека в друзьях нет, можно отпровлять ему запрос
           try {
-            const us = new UserService(user)
+            const us = new UserService()
             let ref = doc(db, `users/${searchedUser.id}/friendsInvites`,user.userId)
-            setDoc(ref, us.getUser())
+            setDoc(ref, us.getUser(user))
           } catch (e) {
             dispatch(openModal('При отправки запроса произошла ошибка'))
           }

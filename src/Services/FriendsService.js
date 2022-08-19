@@ -89,8 +89,8 @@ export class FriendService{
     })
   }
   async acceptFriend(person,user){
-    const fr = new UserService(person)
-    const us = new UserService(user)
+    const fr = new UserService()
+    const us = new UserService()
 
     let r = collection(db, 'users')
     let q = query(r, where('userSearchId', '==', person.userSearchId))
@@ -100,8 +100,8 @@ export class FriendService{
         const id = new UserService().getFriendChatId(user.userSearchId, person.userSearchId)
         let ref1 = doc(db, `users/${user.userId}/usersFriends`, id)
         let ref2 = doc(db, `users/${friend.id}/usersFriends`, id)
-        await setDoc(ref1, fr.getUser())
-        await setDoc(ref2, us.getUser())
+        await setDoc(ref1, fr.getUser(person))
+        await setDoc(ref2, us.getUser(user))
         await deleteDoc(doc(db, `users/${user.userId}/friendsInvites`, person.inviteId))
       })
     }
